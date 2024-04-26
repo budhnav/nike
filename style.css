@@ -1,0 +1,148 @@
+@font-face {
+    font-family:'Montserrat-BlackItalic';
+    src: url('Fonts/Montserrat-BlackItalic.ttf');
+}
+@font-face {
+    font-family:'Montserrat-SemiBold';
+    src: url('Fonts/Montserrat-SemiBold.ttf');
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: none;
+    list-style-type: none;
+    text-decoration: none;
+
+}
+header{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+main .red, main .blue, main .yellow{
+    width:calc(100%/3);
+    height: 100vh;
+    float: left;
+    cursor: pointer;
+    transition: 3s ease-in-out;
+
+
+}
+main .blue{
+    background-color: #4a64ed;
+
+}
+main .red{
+    background-color: #ff5a5a;
+}
+main .yellow{
+    background-color:#ffce6d ;
+}
+::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
+
+}
+header nav{
+   
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+header nav .menu ul,
+header nav .icons ul {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+header nav .menu ul li{
+    font-family: 'Montserrat-SemiBold';
+    color: #fff;
+    font-size: 25px;
+}
+main .blue h1, main .red h1, main .yellow h1{
+
+   
+   height: 100%;
+   width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-family: 'Montserrat-BlackItalic';
+    font-size: 160px;
+    color: #fff;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+    font-style: italic;
+    font-weight: 1000;
+    transition: 3s ease-in-out;
+
+
+}
+main .blue h1::before{
+    content: '';
+    display: block;
+    width: 580px;
+    height:470px ;
+    background-image: url(Blue\ Nike.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform: rotate(342deg) ;
+    transition: 3s ease-in-out;
+}
+main .red h1::before{
+    content: '';
+    display: block;
+    width: 580px;
+    height:470px ;
+    background-image: url(Red\ Nike.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform: rotate(342deg) ;
+    transition: 3s ease-in-out;
+}
+main .yellow h1::before{
+    content: '';
+    display: block;
+    width: 580px;
+    height:470px ;
+    background-image: url(Yellow\ Nike.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform: rotate(342deg) ;
+    transition: 3s ease-in-out;
+}
+main .blue.active , main .red.active ,main .yellow.active{
+    width: 100%;
+}
+main.active .blue,main.active .red,main.active .yellow{
+    width: 0px;
+
+}
+main.active .blue.active,main.active .red.active,main.active .yellow.active{
+    width: 100%;
+}
+main.active .blue.active h1,main.active .red.active  h1,main.active .yellow.active h1{
+    font-size: 430px;
+}
+main.active .blue.active h1::before,main.active .red.active  h1::before,main.active .yellow.active h1::before{
+    width: 1030px;
+    height:1030px;
+    transform:rotate(356deg);
+}
+
+
+
+
+
